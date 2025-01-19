@@ -1,0 +1,7 @@
+# snapshot:
+#   url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/23/4.yaml
+
+resolver: lts-20.14
+packages:
+  - .
+extra-deps: [] 

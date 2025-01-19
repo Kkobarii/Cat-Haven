@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Haven</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="text-center my-4">
+      <h1 class="display-4">🐱 Cat Haven 🐱</h1>
+    </header>
+
+    <!-- Username Input -->
+    <div id="username-section" class="text-center my-4">
+      <label for="username" class="form-label">Enter your username:</label>
+      <input id="username" type="text" class="form-control w-50 mx-auto" placeholder="Your username">
+      <button id="start-btn" class="btn btn-primary mt-3">Start</button>
+    </div>
+
+    <!-- Main App -->
+    <div id="app" class="d-none mb-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Welcome, <span id="username-display"></span>!</h2>
+        <button id="random-cat-btn" class="btn btn-success">Get Random Cat</button>
+      </div>
+
+      <div class="row mt-4">
+        <!-- Gallery Section -->
+        <div id="gallery" class="col-8 d-flex flex-wrap gap-3 align-content-start"></div>
+
+        <!-- Detail Section -->
+        <div id="detail-section" class="col-4 d-none">
+            <img id="detail-image" class="img-fluid mb-3" alt="Selected Cat">
+        
+            <!-- Random Cat Buttons -->
+            <div id="random-buttons" class="d-none">
+            <button id="save-btn" class="btn btn-success">Save Cat</button>
+            <button id="cancel-btn" class="btn btn-secondary">Cancel</button>
+            </div>
+        
+            <!-- Gallery Cat Details -->
+            <div id="gallery-details" class="d-none">
+            <p><strong>Uploaded by:</strong> <span id="detail-owner"></span></p>
+            <h5>Comments:</h5>
+            <ul id="comments-list" class="list-unstyled"></ul>
+        
+            <div class="mt-3">
+                <input id="comment-input" type="text" class="form-control" placeholder="Write a comment">
+                <button id="comment-btn" class="btn btn-primary mt-2">Add Comment</button>
+                <button id="delete-btn" class="btn btn-danger mt-2">Delete Cat</button>
+            </div>
+            </div>
+        </div>
+  
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5" style="background-color: #d49010 !important;">
+      <p class="mb-1">A simple Cat App utilizing the <a href="https://developers.thecatapi.com/">Cat API</a></p>
+      <p class="mb-1">Backend built with Haskell: Beam (Database), and Scotty (API)</p>
+      <p class="mb-1">Frontend in HTML, CSS, and JavaScript</p>
+      <p class="mb-1">Project for Advanced Functional Programming course</p>
+      <p class="mb-0">Made in 2025 by Kkobari</p>
+    </footer>
+  
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
